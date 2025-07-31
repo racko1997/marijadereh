@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbars for horizontal scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 3.9%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 3.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 3.9%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(160, 84%, 39%);
+  --primary-foreground: hsl(355, 7%, 97%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(160, 84%, 39%);
+  --radius: 0.5rem;
+  
+  /* Custom emerald colors for the nutritionist theme */
+  --emerald-50: hsl(151, 81%, 96%);
+  --emerald-100: hsl(149, 80%, 90%);
+  --emerald-500: hsl(160, 84%, 39%);
+  --emerald-600: hsl(158, 64%, 52%);
+  --emerald-700: hsl(158, 64%, 42%);
+  
+  /* Green accent colors */
+  --green-50: hsl(138, 76%, 97%);
+  --green-100: hsl(141, 84%, 93%);
+  --green-600: hsl(142, 76%, 36%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(160, 84%, 39%);
+  --primary-foreground: hsl(355, 7%, 97%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom utility classes for the nutritionist theme */
+.bg-emerald-50 {
+  background-color: var(--emerald-50);
+}
+
+.bg-emerald-100 {
+  background-color: var(--emerald-100);
+}
+
+.bg-emerald-500 {
+  background-color: var(--emerald-500);
+}
+
+.bg-emerald-600 {
+  background-color: var(--emerald-600);
+}
+
+.text-emerald-600 {
+  color: var(--emerald-600);
+}
+
+.text-emerald-700 {
+  color: var(--emerald-700);
+}
+
+.hover\:bg-emerald-600:hover {
+  background-color: var(--emerald-600);
+}
+
+.hover\:text-emerald-600:hover {
+  color: var(--emerald-600);
+}
+
+.hover\:text-emerald-700:hover {
+  color: var(--emerald-700);
+}
+
+.focus\:ring-emerald-500:focus {
+  --tw-ring-color: var(--emerald-500);
+}
+
+.focus\:border-emerald-500:focus {
+  border-color: var(--emerald-500);
+}
+
+.border-emerald-500 {
+  border-color: var(--emerald-500);
+}
+
+/* Gradient utilities */
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.from-green-50 {
+  --tw-gradient-from: var(--green-50);
+  --tw-gradient-to: rgb(255 255 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-emerald-100 {
+  --tw-gradient-to: var(--emerald-100);
+}
+
+.from-emerald-50 {
+  --tw-gradient-from: var(--emerald-50);
+  --tw-gradient-to: rgb(255 255 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-green-100 {
+  --tw-gradient-to: var(--green-100);
+}
+
+.from-emerald-500 {
+  --tw-gradient-from: var(--emerald-500);
+  --tw-gradient-to: rgb(255 255 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-green-600 {
+  --tw-gradient-to: var(--green-600);
+}
